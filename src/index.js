@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const router = require('./routes/patient');
 require("dotenv").config();
 const path = require('path');
+const bodyParser = require("body-parser");
 
 // swagger
 const swaggerUI = require('swagger-ui-express');
@@ -29,6 +30,7 @@ const port = process.env.PORT || 9000;
 
 // middleware
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', router);
 app.use('/api-doc', swaggerUI.serve, swaggerUI.setup(swaggerJsDoc(swaggerSpec)));
 

@@ -16,7 +16,7 @@ const swaggerSpec = {
         },
         servers: [
             {
-                url: "http://localhost:9000"
+                url: "reto-nodejs-swagger.herokuapp.com"
             }
         ]
     },

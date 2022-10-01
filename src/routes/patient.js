@@ -80,7 +80,7 @@ const router = express.Router();
  *      requestBody:
  *          required: true
  *          content:
- *              aplication/json:
+ *              application/json:
  *                  schema:
  *                      type: object
  *                      $ref: '#/components/schemas/Patient' 
@@ -108,7 +108,7 @@ router.post('/patients', (req, res) => {
  *          200:
  *              description: All patients are returned
  *              content:
- *                  aplication/json:
+ *                  application/json:
  *                      schema:
  *                          type: array
  *                          items:
@@ -139,7 +139,7 @@ router.get('/patients', (req, res) => {
  *          200:
  *              description: Patient returned
  *              content:
- *                  aplication/json:
+ *                  application/json:
  *                      schema:
  *                          type: object
  *                          $ref: '#/components/schemas/Patient'
@@ -171,7 +171,7 @@ router.get('/patient/:id', (req, res) => {
  *      requestBody:
  *          required: true
  *          content:
- *              aplication/json:
+ *              application/json:
  *                  schema:
  *                      type: object
  *                      $ref: '#/components/schemas/Patient' 

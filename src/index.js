@@ -30,7 +30,7 @@ const port = process.env.PORT || 9000;
 
 // middleware
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded());
 app.use('/api', router);
 app.use('/api-doc', swaggerUI.serve, swaggerUI.setup(swaggerJsDoc(swaggerSpec)));
 

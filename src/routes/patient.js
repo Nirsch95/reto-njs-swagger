@@ -90,7 +90,7 @@ const router = express.Router();
  */
 
 router.post('/patients', (req, res) => {
-    const patient = patientSchema(req.body.json);
+    const patient = patientSchema(req.body);
     patient
         .save()
         .then((data) => res.json(data))
